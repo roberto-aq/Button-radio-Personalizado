@@ -1,0 +1,129 @@
+:root {
+	--color-active: #ff8800;
+	--color-background: #e1e2e3;
+	--color-dark: #333;
+	--color-letter: #585858;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Poppins;
+	color: var(--color-letter);
+	background-color: var(--color-background);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	max-width: 800px;
+	margin: 100px auto;
+}
+
+.container-1 {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border: 1px solid var(--color-letter);
+	padding: 50px 20px;
+	border-radius: 10px;
+}
+
+.container-1 p {
+	font-weight: 300;
+	font-size: 20px;
+	margin-bottom: 20pxx;
+	color: var(--color-letter);
+}
+
+input {
+	display: none;
+}
+
+label {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+    cursor: pointer;
+}
+
+.radio-button-1 {
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	display: inline-block;
+	border-radius: 50%;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	position: relative;
+}
+
+.radio-button-1::after {
+	content: '';
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	background-color: var(--color-active);
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+
+input:checked + label .radio-button-1::after {
+	opacity: 1;
+}
+
+input:checked + label {
+	color: var(--color-dark);
+	font-weight: 700;
+}
+
+input:checked + label .radio-button-1 {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------------Diseño 2-------------- */
+.container-2{
+    display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border: 1px solid var(--color-letter);
+	padding: 50px 20px;
+	border-radius: 10px;
+}
+
+.radio-button-2{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    border: 2px solid #c5c5c5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-button-2 svg{
+    opacity: 0;
+}
+
+
+.icon-check{
+    width: 15px;
+    height: 15px;
+    stroke: #70adbd;
+    stroke-width: 3px;
+}
+
+input:checked + label .radio-button-2 svg{
+    opacity: 1;
+}
+
+.container-2 input:checked + label{
+    font-weight: 300;
+}
